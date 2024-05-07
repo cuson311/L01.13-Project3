@@ -1,0 +1,638 @@
+{
+  "id": "9547f922-6b81-4932-958f-993d7107020e",
+  "version": "2.0",
+  "name": "Upload system",
+  "url": "https://school.moodledemo.net/my/courses.php",
+  "tests": [{
+    "id": "b5f258b6-9b63-4c05-9207-8029ba9fba79",
+    "name": "Normal case",
+    "commands": [{
+      "id": "ccf81245-33a3-4176-a40c-e1ff4296bbe4",
+      "comment": "",
+      "command": "open",
+      "target": "https://school.moodledemo.net/my/courses.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e300c2a-a843-40c3-984e-2bd958fb78e3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e04ee655-3907-4513-b458-713d00c9600d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=History: Russia in Revolution",
+      "targets": [
+        ["css=#course-info-container-56-4 .multiline > span:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='course-info-container-56-4']/div/div/a/span[3]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[9]/div/div/div/div/a/span[3]/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a09a97d-9e3f-415b-a166-24a7290f42b8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Assignment: Causes of the October 1917 Revolution",
+      "targets": [
+        ["linkText=Assignment: Causes of the October 1917 Revolution", "linkText"],
+        ["css=.modtype_assign .aalink", "css:finder"],
+        ["xpath=(//a[@onclick=''])[10]", "xpath:attributes"],
+        ["xpath=//li[@id='module-573']/div/div[2]/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://school.moodledemo.net/mod/assign/view.php?id=573')])[2]", "xpath:href"],
+        ["xpath=//li[4]/div/div[2]/ul/li/div/div[2]/div[2]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c0bd515e-05b9-4200-a399-8597d1507d5d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Remove submission')]",
+      "targets": [
+        ["id=single_button6639f4a20337c8", "id"],
+        ["css=#single_button6639f4a20337c8", "css:finder"],
+        ["xpath=//button[@id='single_button6639f4a20337c8']", "xpath:attributes"],
+        ["xpath=//section[@id='region-main']/div[2]/div/div/div[2]/div/form/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Remove submission')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3551f20f-a9f3-464e-8b9b-c5c26b3b08d0",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Continue')]",
+      "targets": [
+        ["id=single_button6639f4a3c8e4b8", "id"],
+        ["css=#single_button6639f4a3c8e4b8", "css:finder"],
+        ["xpath=//button[@id='single_button6639f4a3c8e4b8']", "xpath:attributes"],
+        ["xpath=//div[@id='modal-footer']/div/div[2]/form/button", "xpath:idRelative"],
+        ["xpath=//div[2]/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5809571-1037-4a39-8557-34f27ba26b26",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Add submission')]",
+      "targets": [
+        ["id=single_button6639f4a5dc6258", "id"],
+        ["css=#single_button6639f4a5dc6258", "css:finder"],
+        ["xpath=//button[@id='single_button6639f4a5dc6258']", "xpath:attributes"],
+        ["xpath=//section[@id='region-main']/div[2]/div/div/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add submission')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c7e5e07-169b-41a8-8301-0144c02abfd8",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='fp-btn-add']/a[@title='Add...']",
+      "targets": [
+        ["id=yui_3_18_1_1_1715074215803_369", "id"],
+        ["css=#yui_3_18_1_1_1715074215803_369", "css:finder"],
+        ["xpath=//a[@id='yui_3_18_1_1_1715074215803_369']", "xpath:attributes"],
+        ["xpath=//div[@id='yui_3_18_1_1_1715074215803_370']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[20]", "xpath:href"],
+        ["xpath=//fieldset/div/div[2]/div/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ed166aa-307b-405c-911f-9fe1b386022c",
+      "comment": "",
+      "command": "type",
+      "target": "name=repo_upload_file",
+      "targets": [
+        ["id=yui_3_18_1_1_1715074215803_767", "id"],
+        ["name=repo_upload_file", "name"],
+        ["css=#yui_3_18_1_1_1715074215803_767", "css:finder"],
+        ["xpath=//input[@id='yui_3_18_1_1_1715074215803_767']", "xpath:attributes"],
+        ["xpath=//div[@id='yui_3_18_1_1_1715074215803_799']/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/input", "xpath:position"]
+      ],
+      "value": "C:\\Software-Testing\\Project #1 description.pdf"
+    }, {
+      "id": "d39ad1fc-aa4e-44e7-8f6c-da69cf05975c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Upload this file')]",
+      "targets": [
+        ["id=yui_3_18_1_1_1715074215803_811", "id"],
+        ["css=#yui_3_18_1_1_1715074215803_811", "css:finder"],
+        ["xpath=//button[@id='yui_3_18_1_1_1715074215803_811']", "xpath:attributes"],
+        ["xpath=//div[@id='yui_3_18_1_1_1715074215803_812']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Upload this file')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9fd327a-651f-420f-9e44-2ec467f2785d",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_submitbutton",
+      "targets": [
+        ["id=id_submitbutton", "id"],
+        ["name=submitbutton", "name"],
+        ["css=#id_submitbutton", "css:finder"],
+        ["xpath=//input[@id='id_submitbutton']", "xpath:attributes"],
+        ["xpath=//span[@id='yui_3_18_1_1_1715074215803_864']/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a385299-e0cd-49c9-9663-3c6a219dc67c",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//td[@class='submissionstatussubmitted cell c1 lastcol']",
+      "targets": [
+        ["id=yui_3_18_1_1_1715074243958_91", "id"],
+        ["css=#yui_3_18_1_1_1715074243958_91", "css:finder"],
+        ["xpath=//td[@id='yui_3_18_1_1_1715074243958_91']", "xpath:attributes"],
+        ["xpath=//tr[@id='yui_3_18_1_1_1715074243958_92']/td", "xpath:idRelative"],
+        ["xpath=//td", "xpath:position"],
+        ["xpath=//td[contains(.,'Submitted for grading')]", "xpath:innerText"]
+      ],
+      "value": "Submitted for grading"
+    }]
+  }, {
+    "id": "8efcd2dd-d540-4b59-9cfd-663535deb86b",
+    "name": "Large file",
+    "commands": [{
+      "id": "be6c5cf3-0184-445f-a34e-caf1ae016199",
+      "comment": "",
+      "command": "open",
+      "target": "https://school.moodledemo.net/my/courses.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0bc05d56-9c92-41b5-a2b3-5dff87e16960",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4b12c4c5-a74a-4de7-ba76-adf6d7fee873",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=History: Russia in Revolution",
+      "targets": [
+        ["css=#course-info-container-56-4 .multiline > span:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='course-info-container-56-4']/div/div/a/span[3]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[9]/div/div/div/div/a/span[3]/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "db3a7415-c617-47b4-b9b5-bcb2b50df7d6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Assignment: Causes of the October 1917 Revolution",
+      "targets": [
+        ["linkText=Assignment: Causes of the October 1917 Revolution", "linkText"],
+        ["css=.modtype_assign .aalink", "css:finder"],
+        ["xpath=(//a[@onclick=''])[10]", "xpath:attributes"],
+        ["xpath=//li[@id='module-573']/div/div[2]/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://school.moodledemo.net/mod/assign/view.php?id=573')])[2]", "xpath:href"],
+        ["xpath=//li[4]/div/div[2]/ul/li/div/div[2]/div[2]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "71a2bc19-b651-475e-866f-0118e4413ef0",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Remove submission')]",
+      "targets": [
+        ["id=single_button6639f4a20337c8", "id"],
+        ["css=#single_button6639f4a20337c8", "css:finder"],
+        ["xpath=//button[@id='single_button6639f4a20337c8']", "xpath:attributes"],
+        ["xpath=//section[@id='region-main']/div[2]/div/div/div[2]/div/form/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Remove submission')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "69983b18-22a7-47ca-a5c4-383e85f4e772",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Continue')]",
+      "targets": [
+        ["id=single_button6639f4a3c8e4b8", "id"],
+        ["css=#single_button6639f4a3c8e4b8", "css:finder"],
+        ["xpath=//button[@id='single_button6639f4a3c8e4b8']", "xpath:attributes"],
+        ["xpath=//div[@id='modal-footer']/div/div[2]/form/button", "xpath:idRelative"],
+        ["xpath=//div[2]/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "df46d99e-5910-4b22-bf29-dd28eded5e98",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Add submission')]",
+      "targets": [
+        ["id=single_button6639f4a5dc6258", "id"],
+        ["css=#single_button6639f4a5dc6258", "css:finder"],
+        ["xpath=//button[@id='single_button6639f4a5dc6258']", "xpath:attributes"],
+        ["xpath=//section[@id='region-main']/div[2]/div/div/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add submission')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d9ab972e-1d4b-427d-9c77-976e6cddc14e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='fp-btn-add']/a[@title='Add...']",
+      "targets": [
+        ["id=yui_3_18_1_1_1715074215803_369", "id"],
+        ["css=#yui_3_18_1_1_1715074215803_369", "css:finder"],
+        ["xpath=//a[@id='yui_3_18_1_1_1715074215803_369']", "xpath:attributes"],
+        ["xpath=//div[@id='yui_3_18_1_1_1715074215803_370']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[20]", "xpath:href"],
+        ["xpath=//fieldset/div/div[2]/div/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "415a416c-cbcc-4c8c-a9da-e1b0d26b61fd",
+      "comment": "",
+      "command": "type",
+      "target": "name=repo_upload_file",
+      "targets": [
+        ["id=yui_3_18_1_1_1715074215803_767", "id"],
+        ["name=repo_upload_file", "name"],
+        ["css=#yui_3_18_1_1_1715074215803_767", "css:finder"],
+        ["xpath=//input[@id='yui_3_18_1_1_1715074215803_767']", "xpath:attributes"],
+        ["xpath=//div[@id='yui_3_18_1_1_1715074215803_799']/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/input", "xpath:position"]
+      ],
+      "value": "C:\\Software-Testing\\5_Unitintergration testing.pdf"
+    }, {
+      "id": "d6ab699c-30bf-49c2-8538-7ec683422dcb",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Upload this file')]",
+      "targets": [
+        ["id=yui_3_18_1_1_1715074215803_811", "id"],
+        ["css=#yui_3_18_1_1_1715074215803_811", "css:finder"],
+        ["xpath=//button[@id='yui_3_18_1_1_1715074215803_811']", "xpath:attributes"],
+        ["xpath=//div[@id='yui_3_18_1_1_1715074215803_812']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Upload this file')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fab8bfd0-d3ff-4ea2-bd0e-6e41b97acc90",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@class='moodle-exception-message']",
+      "targets": [],
+      "value": "The file 5_Unitintergration testing.pdf is too large. The maximum size you can upload is 1 MB."
+    }]
+  }, {
+    "id": "5ada95ca-c498-4a44-8456-0f65f2b58606",
+    "name": "Too many files",
+    "commands": [{
+      "id": "a927cb7b-42d6-4d49-b494-df54f69e1ba2",
+      "comment": "",
+      "command": "open",
+      "target": "https://school.moodledemo.net/my/courses.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "373b1567-3262-4e1e-8316-5479a96b6efe",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "badcdf5e-f6dd-47c8-a63c-f0f78b6b97c4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=History: Russia in Revolution",
+      "targets": [
+        ["css=#course-info-container-56-4 .multiline > span:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='course-info-container-56-4']/div/div/a/span[3]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[9]/div/div/div/div/a/span[3]/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0e2bfe90-b3bc-480b-90d3-8524d65bc778",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Assignment: Causes of the October 1917 Revolution",
+      "targets": [
+        ["linkText=Assignment: Causes of the October 1917 Revolution", "linkText"],
+        ["css=.modtype_assign .aalink", "css:finder"],
+        ["xpath=(//a[@onclick=''])[10]", "xpath:attributes"],
+        ["xpath=//li[@id='module-573']/div/div[2]/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://school.moodledemo.net/mod/assign/view.php?id=573')])[2]", "xpath:href"],
+        ["xpath=//li[4]/div/div[2]/ul/li/div/div[2]/div[2]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2770a271-625d-4eca-a082-0aa14c46968f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Edit submission')]",
+      "targets": [
+        ["id=single_button6639f4a20337c8", "id"],
+        ["css=#single_button6639f4a20337c8", "css:finder"],
+        ["xpath=//button[@id='single_button6639f4a20337c8']", "xpath:attributes"],
+        ["xpath=//section[@id='region-main']/div[2]/div/div/div[2]/div/form/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Remove submission')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f8028c73-056b-4199-9107-154d5565f0e6",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='fp-btn-add']/a[@title='Add...']",
+      "targets": [
+        ["id=yui_3_18_1_1_1715074215803_369", "id"],
+        ["css=#yui_3_18_1_1_1715074215803_369", "css:finder"],
+        ["xpath=//a[@id='yui_3_18_1_1_1715074215803_369']", "xpath:attributes"],
+        ["xpath=//div[@id='yui_3_18_1_1_1715074215803_370']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[20]", "xpath:href"],
+        ["xpath=//fieldset/div/div[2]/div/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7588e7e7-86c7-464c-859a-c81e732a0231",
+      "comment": "",
+      "command": "click",
+      "target": "name=repo_upload_file",
+      "targets": [
+        ["id=yui_3_18_1_1_1715074215803_767", "id"],
+        ["name=repo_upload_file", "name"],
+        ["css=#yui_3_18_1_1_1715074215803_767", "css:finder"],
+        ["xpath=//input[@id='yui_3_18_1_1_1715074215803_767']", "xpath:attributes"],
+        ["xpath=//div[@id='yui_3_18_1_1_1715074215803_799']/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7cd1368-6b69-45e5-aa62-f49083365b4f",
+      "comment": "",
+      "command": "type",
+      "target": "name=repo_upload_file",
+      "targets": [
+        ["id=yui_3_18_1_1_1715074215803_767", "id"],
+        ["name=repo_upload_file", "name"],
+        ["css=#yui_3_18_1_1_1715074215803_767", "css:finder"],
+        ["xpath=//input[@id='yui_3_18_1_1_1715074215803_767']", "xpath:attributes"],
+        ["xpath=//div[@id='yui_3_18_1_1_1715074215803_799']/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/input", "xpath:position"]
+      ],
+      "value": "E:\\OneDrive\\Documents_Son\\CODING\\Software_Testing\\Project #2 description.pdf"
+    }, {
+      "id": "cd7729a7-6413-4426-9cb6-19747a1dcbbb",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Upload this file')]",
+      "targets": [
+        ["id=yui_3_18_1_1_1715074215803_811", "id"],
+        ["css=#yui_3_18_1_1_1715074215803_811", "css:finder"],
+        ["xpath=//button[@id='yui_3_18_1_1_1715074215803_811']", "xpath:attributes"],
+        ["xpath=//div[@id='yui_3_18_1_1_1715074215803_812']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Upload this file')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "489a9e66-47c8-40af-aa81-389ed1323ad5",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@class='moodle-exception-message']",
+      "targets": [],
+      "value": "Video file (MP4) filetype cannot be accepted."
+    }]
+  }, {
+    "id": "61958323-348f-452a-b885-244e10a1ce40",
+    "name": "Incorrect file type",
+    "commands": [{
+      "id": "af7f6e43-3029-4330-8bb8-803f88a36476",
+      "comment": "",
+      "command": "open",
+      "target": "https://school.moodledemo.net/my/courses.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5d2a3bf5-1037-45e2-947b-4a4478d0399d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "25764c06-1940-4996-892b-47a8c0244006",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=History: Russia in Revolution",
+      "targets": [
+        ["css=#course-info-container-56-4 .multiline > span:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='course-info-container-56-4']/div/div/a/span[3]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[9]/div/div/div/div/a/span[3]/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "76150c37-5729-49c5-86a1-5ec57554e007",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Assignment: Causes of the October 1917 Revolution",
+      "targets": [
+        ["linkText=Assignment: Causes of the October 1917 Revolution", "linkText"],
+        ["css=.modtype_assign .aalink", "css:finder"],
+        ["xpath=(//a[@onclick=''])[10]", "xpath:attributes"],
+        ["xpath=//li[@id='module-573']/div/div[2]/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://school.moodledemo.net/mod/assign/view.php?id=573')])[2]", "xpath:href"],
+        ["xpath=//li[4]/div/div[2]/ul/li/div/div[2]/div[2]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "220b2606-1eca-4e72-9d71-f648c6e2196b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Add submission')]",
+      "targets": [
+        ["id=single_button6639f4a5dc6258", "id"],
+        ["css=#single_button6639f4a5dc6258", "css:finder"],
+        ["xpath=//button[@id='single_button6639f4a5dc6258']", "xpath:attributes"],
+        ["xpath=//section[@id='region-main']/div[2]/div/div/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add submission')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8e26e40b-a490-49fa-bdc9-d0d70a24f6a4",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='fp-btn-add']/a[@title='Add...']",
+      "targets": [
+        ["id=yui_3_18_1_1_1715074215803_369", "id"],
+        ["css=#yui_3_18_1_1_1715074215803_369", "css:finder"],
+        ["xpath=//a[@id='yui_3_18_1_1_1715074215803_369']", "xpath:attributes"],
+        ["xpath=//div[@id='yui_3_18_1_1_1715074215803_370']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[20]", "xpath:href"],
+        ["xpath=//fieldset/div/div[2]/div/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e30b605-7ba5-48f9-ba3b-012f5ff8017f",
+      "comment": "",
+      "command": "type",
+      "target": "name=repo_upload_file",
+      "targets": [
+        ["id=yui_3_18_1_1_1715074215803_767", "id"],
+        ["name=repo_upload_file", "name"],
+        ["css=#yui_3_18_1_1_1715074215803_767", "css:finder"],
+        ["xpath=//input[@id='yui_3_18_1_1_1715074215803_767']", "xpath:attributes"],
+        ["xpath=//div[@id='yui_3_18_1_1_1715074215803_799']/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/input", "xpath:position"]
+      ],
+      "value": "C:\\Software-Testing\\singleball.mp4"
+    }, {
+      "id": "8d628fdd-1004-4d3e-8549-bc46f4682960",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Upload this file')]",
+      "targets": [
+        ["id=yui_3_18_1_1_1715074215803_811", "id"],
+        ["css=#yui_3_18_1_1_1715074215803_811", "css:finder"],
+        ["xpath=//button[@id='yui_3_18_1_1_1715074215803_811']", "xpath:attributes"],
+        ["xpath=//div[@id='yui_3_18_1_1_1715074215803_812']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Upload this file')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1aefa3b7-9b01-43f2-be35-ec0fd60365cb",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@class='moodle-exception-message']",
+      "targets": [],
+      "value": "Video file (MP4) filetype cannot be accepted."
+    }]
+  }, {
+    "id": "617e327c-79f9-400b-8e57-43d646df511c",
+    "name": "Large file and Incorrect file type",
+    "commands": [{
+      "id": "b4520b53-49db-4a84-bd23-6093f557eddb",
+      "comment": "",
+      "command": "open",
+      "target": "https://school.moodledemo.net/my/courses.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "322e3b94-3857-425c-a6bc-6b8e6d7beba2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1056",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8f57940d-b747-4f08-ad0d-8ffbe8daff23",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=History: Russia in Revolution",
+      "targets": [
+        ["css=#course-info-container-56-4 .multiline > span:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='course-info-container-56-4']/div/div/a/span[3]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[9]/div/div/div/div/a/span[3]/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bbd7639d-7cf3-4fa0-89a6-73c07385f96a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Assignment: Causes of the October 1917 Revolution",
+      "targets": [
+        ["linkText=Assignment: Causes of the October 1917 Revolution", "linkText"],
+        ["css=.modtype_assign .aalink", "css:finder"],
+        ["xpath=(//a[@onclick=''])[10]", "xpath:attributes"],
+        ["xpath=//li[@id='module-573']/div/div[2]/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://school.moodledemo.net/mod/assign/view.php?id=573')])[2]", "xpath:href"],
+        ["xpath=//li[4]/div/div[2]/ul/li/div/div[2]/div[2]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f08a376-ab61-4261-8625-f47252f75717",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Add submission')]",
+      "targets": [
+        ["id=single_button6639f4a5dc6258", "id"],
+        ["css=#single_button6639f4a5dc6258", "css:finder"],
+        ["xpath=//button[@id='single_button6639f4a5dc6258']", "xpath:attributes"],
+        ["xpath=//section[@id='region-main']/div[2]/div/div/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add submission')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "df3b8862-808b-481a-9973-d28dd936f5ff",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@class='fp-btn-add']/a[@title='Add...']",
+      "targets": [
+        ["id=yui_3_18_1_1_1715074215803_369", "id"],
+        ["css=#yui_3_18_1_1_1715074215803_369", "css:finder"],
+        ["xpath=//a[@id='yui_3_18_1_1_1715074215803_369']", "xpath:attributes"],
+        ["xpath=//div[@id='yui_3_18_1_1_1715074215803_370']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[20]", "xpath:href"],
+        ["xpath=//fieldset/div/div[2]/div/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1b911e3-ea36-4f0a-b23a-8afdada26067",
+      "comment": "",
+      "command": "type",
+      "target": "name=repo_upload_file",
+      "targets": [
+        ["id=yui_3_18_1_1_1715074215803_767", "id"],
+        ["name=repo_upload_file", "name"],
+        ["css=#yui_3_18_1_1_1715074215803_767", "css:finder"],
+        ["xpath=//input[@id='yui_3_18_1_1_1715074215803_767']", "xpath:attributes"],
+        ["xpath=//div[@id='yui_3_18_1_1_1715074215803_799']/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/input", "xpath:position"]
+      ],
+      "value": "C:\\Software-Testing\\vipboard.mp4"
+    }, {
+      "id": "0774ccac-5ae6-46e7-94da-75883aac5696",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[contains(text(),'Upload this file')]",
+      "targets": [
+        ["id=yui_3_18_1_1_1715074215803_811", "id"],
+        ["css=#yui_3_18_1_1_1715074215803_811", "css:finder"],
+        ["xpath=//button[@id='yui_3_18_1_1_1715074215803_811']", "xpath:attributes"],
+        ["xpath=//div[@id='yui_3_18_1_1_1715074215803_812']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Upload this file')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a61c5d99-4114-4ac6-b757-7bcb68934657",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//div[@class='moodle-exception-message']",
+      "targets": [],
+      "value": "Video file (MP4) filetype cannot be accepted."
+    }]
+  }],
+  "suites": [{
+    "id": "a0681b66-4eeb-4dc1-b83f-d53148e67779",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://school.moodledemo.net/my/courses.php"],
+  "plugins": []
+}
