@@ -7,12 +7,17 @@ git remote add origin https://github.com/cuson311/L01.13-Project3.git
 git fetch
 git checkout cuson
 ```
-## 2. Install selenium
+## 2. Install selenium and pandas
 ```
-pip install selenium
+pip install selenium pandas
 ``` 
-## 3. Run code
+## 3. Change path to the folder you want to use
 ```
-python3 + [name-of-file]
+cd Level_1
+cd [your-folder]
+```
+## 4. Run code
+```
+python3 + [name-of-file.py]
 ```
 
