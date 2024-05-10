@@ -3,7 +3,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import StaleElementReferenceException, TimeoutException
 import time
 import pandas as pd
 
@@ -46,6 +45,10 @@ class TestUpload:
     def enter_course(self, course_name):
         course_element = self.wait.until(EC.element_to_be_clickable((By.LINK_TEXT, course_name)))
         course_element.click()
+    
+    def remove_file(self):
+        self.wait.until(EC.element_to_be_clickable((By.XPATH, "//button[contains(text(),\'Remove submission\')]"))).click()
+        self.wait.until(EC.element_to_be_clickable((By.XPATH, "//button[contains(text(),\'Continue\')]"))).click()
         
     def test_upload(self, data):
         self.driver.get("https://school.moodledemo.net/my/courses.php")
@@ -55,15 +58,14 @@ class TestUpload:
         print("Testcase", data.get("Testcase"))
         self.wait.until(EC.element_to_be_clickable((By.LINK_TEXT, ASSIGNMENT_NAME))).click()
         #Remove submission
-        if data.get("Testcase") == "TC-03-01" or data.get("Testcase") == "TC-03-02":
-            self.wait.until(EC.element_to_be_clickable((By.XPATH, "//button[contains(text(),\'Remove submission\')]"))).click()
-            self.wait.until(EC.element_to_be_clickable((By.XPATH, "//button[contains(text(),\'Continue\')]"))).click()
+        if data.get("Testcase") == "TC-03-01" or data.get("Testcase") == "TC-03-02": self.remove_file()
         # Add submission
         self.wait.until(EC.element_to_be_clickable((By.XPATH, "//button[contains(text(),\'Add submission\')]"))).click()
         self.wait.until(EC.element_to_be_clickable((By.XPATH, "//div[@class=\'fp-btn-add\']/a[@title=\'Add...\']"))).click()
         
         # self.wait.until(EC.visibility_of_element_located((By.NAME, "repo_upload_file"))).click()
-        self.wait.until(EC.visibility_of_element_located((By.NAME, "repo_upload_file"))).send_keys(data.get("File"))
+        # self.wait.until(EC.element_to_be_clickable((By.NAME, "repo_upload_file"))).click()
+        self.wait.until(EC.visibility_of_element_located((By.NAME, "repo_upload_file"))).send_keys(data.get("File1"))
         
         self.wait.until(EC.element_to_be_clickable((By.XPATH, "//button[contains(text(),\'Upload this file\')]"))).click()
         
@@ -78,7 +80,12 @@ class TestUpload:
             except:
                 print("Failure, Testcase", data.get("Testcase"), "Assertion failed")
             return   
-
+        
+        if data.get("Testcase") in ["TC-03-03", "TC-03-05", "TC-03-07", "TC-03-08"]:
+            time.sleep(2)
+            if not self.driver.find_element(By.XPATH, "//i[contains(@class, 'fa-file-o')]").is_displayed():
+                print("Failure, Testcase", data.get("Testcase"), "Could not find the upload button")
+                return
         try:
             element = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//div[@class=\'moodle-exception-message\']"))).text
             result = element.strip()

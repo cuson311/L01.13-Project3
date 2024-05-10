@@ -21,6 +21,8 @@ class TestUserPartialMatch():
   def test_userPartialMatch(self):
     self.driver.get("https://school.moodledemo.net/my/courses.php")
     self.driver.set_window_size(1936, 1056)
+    text = self.driver.find_element(By.XPATH, "//div[@class=\'usermenu\']").text
+    assert text != "Bạn đang truy cập với tư cách khách vãng lai\\\\nĐăng nhập"
     self.driver.find_element(By.CSS_SELECTOR, ".btn-open > .icon").click()
     self.driver.find_element(By.NAME, "q").send_keys("Activity")
     self.driver.find_element(By.XPATH, "//div[@id=\'searchform-navbar\']/form/div/div/button/i").click()

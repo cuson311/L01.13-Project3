@@ -21,6 +21,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "9077d2ac-1ba6-4bf2-99d4-e01b6c9a6f2e",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "xpath=//div[@class='usermenu']",
+      "targets": [],
+      "value": "Bạn đang truy cập với tư cách khách vãng lai\\nĐăng nhập"
+    }, {
       "id": "f91c31a9-36e2-4dbe-a04d-8b811331f004",
       "comment": "",
       "command": "click",
@@ -124,7 +131,7 @@
       "id": "1bc74416-5285-4d87-9560-af41c6e9af3d",
       "comment": "",
       "command": "assertText",
-      "target": "xpath=//div/span",
+      "target": "xpath=//div[@class='usermenu']",
       "targets": [
         ["id=yui_3_18_1_1_1715063042836_18", "id"],
         ["css=#yui_3_18_1_1_1715063042836_18", "css:finder"],
@@ -204,6 +211,13 @@
       "target": "1936x1056",
       "targets": [],
       "value": ""
+    }, {
+      "id": "b8d9929c-0260-4fec-906c-cbb9e7d64f17",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "xpath=//div[@class='usermenu']",
+      "targets": [],
+      "value": "Bạn đang truy cập với tư cách khách vãng lai\\nĐăng nhập"
     }, {
       "id": "1d26ed13-f89f-4747-b171-32f75f094ad9",
       "comment": "",
@@ -307,6 +321,13 @@
       "target": "1936x1056",
       "targets": [],
       "value": ""
+    }, {
+      "id": "1aa5a009-b36f-4f1d-849b-32792419da0b",
+      "comment": "",
+      "command": "assertNotText",
+      "target": "xpath=//div[@class='usermenu']",
+      "targets": [],
+      "value": "Bạn đang truy cập với tư cách khách vãng lai\\nĐăng nhập"
     }, {
       "id": "9c2931f4-4b63-44a6-9995-c44a5f1f2671",
       "comment": "",

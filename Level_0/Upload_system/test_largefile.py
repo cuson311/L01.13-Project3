@@ -27,6 +27,7 @@ class TestLargefile():
     self.driver.find_element(By.XPATH, "//button[contains(text(),\'Continue\')]").click()
     self.driver.find_element(By.XPATH, "//button[contains(text(),\'Add submission\')]").click()
     self.driver.find_element(By.XPATH, "//div[@class=\'fp-btn-add\']/a[@title=\'Add...\']").click()
+    self.driver.find_element(By.NAME, "repo_upload_file").click()
     self.driver.find_element(By.NAME, "repo_upload_file").send_keys("C:\\Software-Testing\\5_Unitintergration testing.pdf")
     self.driver.find_element(By.XPATH, "//button[contains(text(),\'Upload this file\')]").click()
     assert self.driver.find_element(By.XPATH, "//div[@class=\'moodle-exception-message\']").text == "The file 5_Unitintergration testing.pdf is too large. The maximum size you can upload is 1 MB."

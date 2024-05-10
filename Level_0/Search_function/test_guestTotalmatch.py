@@ -21,7 +21,7 @@ class TestGuestTotalmatch():
   def test_guestTotalmatch(self):
     self.driver.get("https://school.moodledemo.net/my/courses.php")
     self.driver.set_window_size(1936, 1056)
-    assert self.driver.find_element(By.XPATH, "//div/span").text == "Bạn đang truy cập với tư cách khách vãng lai\\\\nĐăng nhập"
+    assert self.driver.find_element(By.XPATH, "//div[@class=\'usermenu\']").text == "Bạn đang truy cập với tư cách khách vãng lai\\\\nĐăng nhập"
     self.driver.find_element(By.CSS_SELECTOR, ".btn-open > .icon").click()
     self.driver.find_element(By.NAME, "q").send_keys("Activity Examples")
     self.driver.find_element(By.XPATH, "//div[@id=\'searchform-navbar\']/form/div/div/button/i").click()

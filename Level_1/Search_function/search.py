@@ -49,13 +49,23 @@ class TestSearch:
         if data.get("Testcase") == "TC-02-02": 
             self.log_out()
             try:
-                element = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//div/span"))).text
+                element = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//div[@class=\'usermenu\']"))).text
                 resultlogin = element.strip()
                 assert resultlogin == data['Expected Login'].replace('\\n', '\n').strip()
-                print("Success, Testcase", data.get("Testcase"), "Assertion login passed")
+                print("Success, Testcase", data.get("Testcase"), "Assertion login passed: User is not login")
             except AssertionError:
-                print("Failure, Testcase", data.get("Testcase"), "Assertion login failed")
-        
+                print("Failure, Testcase", data.get("Testcase"), "Assertion login failed: User is login")
+                return
+        else:
+            try:
+                element = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//div[@class=\'usermenu\']"))).text
+                resultlogin = element.strip()
+                assert resultlogin != data['Expected Login'].replace('\\n', '\n').strip()
+                print("Success, Testcase", data.get("Testcase"), "Assertion login passed: User is login")
+            except AssertionError:
+                print("Failure, Testcase", data.get("Testcase"), "Assertion login failed: User is not login")
+                return
+                
         self.wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, ".btn-open > .icon"))).click()
         self.wait.until(EC.element_to_be_clickable((By.NAME, "q"))).send_keys(data.get("Input"))
         self.wait.until(EC.element_to_be_clickable((By.XPATH, "//div[@id=\'searchform-navbar\']/form/div/div/button/i"))).click()
