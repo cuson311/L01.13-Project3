@@ -3,6 +3,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import UnexpectedAlertPresentException
+from selenium.common.exceptions import NoAlertPresentException, TimeoutException
 import time
 import pandas as pd
 
@@ -53,7 +55,6 @@ class TestUpload:
     def test_upload(self, data):
         self.driver.get("https://school.moodledemo.net/my/courses.php")
         self.driver.maximize_window()
-        # self.driver.set_window_size(974, 1047)
         self.enter_course(COURSE_NAME)
         print("Testcase", data.get("Testcase"))
         self.wait.until(EC.element_to_be_clickable((By.LINK_TEXT, ASSIGNMENT_NAME))).click()
@@ -83,8 +84,12 @@ class TestUpload:
         
         if data.get("Testcase") in ["TC-03-03", "TC-03-05", "TC-03-07", "TC-03-08"]:
             time.sleep(2)
-            if not self.driver.find_element(By.XPATH, "//i[contains(@class, 'fa-file-o')]").is_displayed():
-                print("Failure, Testcase", data.get("Testcase"), "Could not find the upload button")
+            element = self.driver.find_element(By.CSS_SELECTOR, ".fp-btn-add")
+            
+            display = element.value_of_css_property("display")
+            if display == "none":
+                print("Failure, Testcase", data.get("Testcase"), "Could not find the upload button! Max files reached.")
+                self.wait.until(EC.element_to_be_clickable((By.ID, "id_cancel"))).click()
                 return
         try:
             element = self.wait.until(EC.visibility_of_element_located((By.XPATH, "//div[@class=\'moodle-exception-message\']"))).text
@@ -93,7 +98,7 @@ class TestUpload:
             print("Success, Testcase", data.get("Testcase"), "Assertion passed")
         except:
             print("Failure, Testcase", data.get("Testcase"), "Assertion failed")
-        
+            
         
 # Read data from Excel file
 def read_excel_data(file_path):
@@ -104,7 +109,6 @@ def main():
     test_data = read_excel_data("uploaddata.xlsx")
     test = TestUpload(USERNAME, PASSWORD)
     test.log_in()
-    
     for data in test_data:
         test.test_upload(data)
     
