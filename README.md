@@ -20,4 +20,6 @@ cd [your-folder]
 ```
 python3 + [name-of-file.py]
 ```
+## Note: 
+### If you run file upload.py, you need to put folder "Software-Testing" in Local Disk (C:) to be able to perform the testcase
 
